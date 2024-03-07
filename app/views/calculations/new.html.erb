@@ -1,0 +1,22 @@
+<h1>Calculate Job Hours</h1>
+
+<%= form_with(url: calculate_path, method: "post", local: true, data: { turbo: false }) do |form| %>
+  <div style="padding-bottom: 10px;">
+    <%= form.label :project_name, "Project Name" %>
+    <%= form.text_field :project_name %>
+  </div>
+
+  <div style="padding-bottom: 10px;">
+    <%= form.label :number_of_people, "Number of People" %>
+    <%= form.number_field :number_of_people %>
+  </div>
+
+  <div style="padding-bottom: 10px;">
+    <%= form.label :number_of_hours, "Number of Hours" %>
+    <%= form.number_field :number_of_hours %>
+  </div>
+
+  <div>
+    <%= form.submit "Calculate" %>
+  </div>
+<% end %>
