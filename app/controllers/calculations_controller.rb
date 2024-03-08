@@ -6,7 +6,7 @@ class CalculationsController < ApplicationController
   def calculate
     project_name = params[:project_name]
     number_of_people = params[:number_of_people].to_i
-    number_of_hours = params[:number_of_hours].to_i
+    number_of_hours = params[:number_of_hours].to_f
     @total_hours = number_of_people * number_of_hours
     @project_name = project_name
 
